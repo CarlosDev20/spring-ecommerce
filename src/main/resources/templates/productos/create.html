@@ -19,13 +19,13 @@
 
 </head>
 
-<body>
+<body class="d-flex flex-column min-vh-100">
 
   <!-- Navigation -->
   <div th:include="administrador/template_admin.html::header"></div>
 
   <!-- Page Content -->
-  <div class="container">
+  <main class="container flex-grow-1">
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">
@@ -87,7 +87,7 @@
 
     </form>
 
-  </div>
+  </main>
   <!-- /.container -->
 
   <div th:include="administrador/template_admin.html::footer"></div>
