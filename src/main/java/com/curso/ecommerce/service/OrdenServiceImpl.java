@@ -27,6 +27,7 @@ public class OrdenServiceImpl implements IOrdenService{
 
     //generando numero de orden
 
+    @Override
     public String generarNumeroOrden(){
         int numero = 0;
         String numeroConcatenado = "";

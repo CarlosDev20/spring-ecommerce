@@ -9,4 +9,6 @@ public interface IOrdenService {
     public List<Orden> findAll();
 
     public Orden save (Orden orden);
+
+    public String generarNumeroOrden();
 }
