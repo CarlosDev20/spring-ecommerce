@@ -175,8 +175,13 @@ public class HomeController {
     public String searchProduct(@RequestParam String nombre, Model model){
         LOGGER.info("Nombre del producto: {}", nombre);
 
-        List<Producto> productos = productoService.
-            findAll().stream().filter(p -> p.getNombre().contains(nombre)).collect(Collectors.toList());
+        //List<Producto> productos = productoService.
+        //    findAll().stream().filter(p -> p.getNombre().contains(nombre)).collect(Collectors.toList());
+        
+        List<Producto> productos = productoService.findAll()
+            .stream()
+            .filter(p -> p.getNombre().toLowerCase().contains(nombre.toLowerCase()))
+            .collect(Collectors.toList());
         
         model.addAttribute("productos", productos);
         return "usuario/home";

@@ -6,5 +6,7 @@ import com.curso.ecommerce.model.Usuario;
 
 public interface IUsuarioService {
 
-    Optional<Usuario> findById(Integer id);
+    public Optional<Usuario> findById(Integer id);
+
+    public Usuario save (Usuario usuario);
 }
